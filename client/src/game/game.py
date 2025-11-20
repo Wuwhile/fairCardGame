@@ -12,4 +12,6 @@ in src/game, following functions should be implemented:
 - updating game state based on player actions and network data
 - checking for win/loss conditions and game progression
 
+This file should work as a module roadmap for implementing game functionalities,
+with most of the actual code being implemented in other files/modules as needed.
 '''

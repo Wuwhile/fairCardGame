@@ -10,4 +10,6 @@ in src/graphic, following functions should be implemented:
 - rendering game UI elements and card objects on the screen
 - updating the screen based on game state changes
 
+This file should work as a module roadmap for implementing graphic functionalities in the game,
+with most of the actual code being implemented in other files/modules as needed.
 '''

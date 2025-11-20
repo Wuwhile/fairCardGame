@@ -1,1 +1,0 @@
-# core/graphic should contain functions and classes that handle rendering, visual effects, and graphical assets for the game.

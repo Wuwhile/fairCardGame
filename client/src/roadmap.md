@@ -92,3 +92,38 @@ my_card_game/
 1.  先写 **src/core/game.py**，实现 `check_win_condition()` (胜利条件检测) 等纯逻辑。
 2.  使用 **命令行 (CLI)** 测试这些逻辑，确保发牌、出牌、回合切换没有 Bug。
 3.  逻辑跑通后，再编写 Pygame 界面，将 `print()` 替换为 `screen.blit()`。
+
+---
+
+Network todo:
+
+把主机（被连接）作为 `server`，客机（连接）作为 `client`。
+
+1. 客户端之间建立连接；结束时断开
+    
+    仅 `network`
+
+2. 同步开始游戏进程；
+    
+    `server` 端的 `game` 开始游戏 -> 由 `server` 端 `network` 唤起 `client` 端的 `game` 开始游戏并接受初始状态
+
+3. 游戏过程中传递游戏事件信息
+
+    `game` 调用 `network` 发出信息
+
+4. 收到事件信息之后正确调用游戏函数
+
+    `network` 接受信息 -> `game` 处理
+
+
+数据包格式：
+
+```json
+[
+    "event" = event, // 事件类型
+    "card" = card,  // 卡牌，如果不涉及就留空（给出空卡牌）
+    "param" = param, // 参数，如果不涉及（ry
+    "player" = player // 玩家，(ry
+]
+```
+

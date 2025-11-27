@@ -38,10 +38,13 @@ EVENT_LIST = [
 STATUS items should be indicating different status effects
 that can be applied to players or card items, such as buffs or debuffs.
 """
+
 STATUS_CARD_BUFF = "card_buff"
 STATUS_CARD_DEBUFF = "card_debuff"
 STATUS_CARD_NO_EFFECT = "card_no_effect"
 STATUS_LIST = [STATUS_CARD_BUFF, STATUS_CARD_DEBUFF, STATUS_CARD_NO_EFFECT]
+
+# deprecated for now
 
 """
 NCARDITEM items are different types of card items
